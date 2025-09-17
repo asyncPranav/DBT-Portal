@@ -1,0 +1,18 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.btn-info {
+  background-color: #0dcaf0;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #198754;
+  color: #fff;
+}
+
+footer a {
+  color: #0dcaf0;
+  text-decoration: underline;
+}
