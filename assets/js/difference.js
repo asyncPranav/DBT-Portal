@@ -4,10 +4,16 @@ const tabProcess = document.getElementById("tab-process");
 const contentComparison = document.getElementById("content-comparison");
 const contentProcess = document.getElementById("content-process");
 
+// Get the warning card element
+const warningCard = document.getElementById("warning-card");
+
 tabComparison.addEventListener("click", () => {
   // Show comparison, hide process flow
   contentComparison.classList.remove("hidden");
   contentProcess.classList.add("hidden");
+
+  // Show warning
+  warningCard.classList.remove("hidden");
 
   // Style active tab
   tabComparison.classList.add("bg-blue-600", "text-white", "shadow");
@@ -20,6 +26,9 @@ tabProcess.addEventListener("click", () => {
   // Show process flow, hide comparison
   contentProcess.classList.remove("hidden");
   contentComparison.classList.add("hidden");
+
+  // Hide warning
+  warningCard.classList.add("hidden");
 
   // Style active tab
   tabProcess.classList.add("bg-blue-600", "text-white", "shadow");
