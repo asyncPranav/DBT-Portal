@@ -12,12 +12,19 @@
     .fade-in {
       animation: fadeIn 0.6s ease-in-out;
     }
-    
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    
+
     .question-card:hover {
       transform: translateY(-2px);
     }
@@ -30,10 +37,13 @@
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
       <a href="index.html" class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div
+          class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.42A12.083 12.083 0 0112 21.5 12.083 12.083 0 015.84 10.58L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 14l6.16-3.42A12.083 12.083 0 0112 21.5 12.083 12.083 0 015.84 10.58L12 14z" />
           </svg>
         </div>
         <div>
@@ -50,7 +60,9 @@
         <a href="support.html" class="hover:text-blue-600 transition font-semibold">Support</a>
       </nav>
 
-      <button id="menuBtn" class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Open menu">
+      <button id="menuBtn"
+        class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -58,15 +70,38 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden" role="dialog" aria-modal="true" aria-labelledby="mobileMenuLabel">
+    <div id="mobileMenu"
+      class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden"
+      role="dialog" aria-modal="true" aria-labelledby="mobileMenuLabel">
+
+      <!-- Top Header: Logo + Title + Close -->
       <div class="p-4 flex justify-between items-center border-b">
-        <span id="mobileMenuLabel" class="font-semibold text-lg text-blue-600">Menu</span>
-        <button id="closeMenu" class="text-gray-600 hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-400" aria-label="Close menu">
+
+        <!-- Logo + Text -->
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 14l6.16-3.42A12.083 12.083 0 0112 21.5 12.083 12.083 0 015.84 10.58L12 14z" />
+            </svg>
+          </div>
+          <h2 id="mobileMenuLabel" class="font-semibold text-sm text-black-600">DBT Account Guide</h2>
+        </div>
+
+        <!-- Close Button -->
+        <button id="closeMenu"
+          class="text-gray-600 hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
+          aria-label="Close menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
+
+      <!-- Mobile Nav Links -->
       <nav class="flex flex-col space-y-4 p-4 text-gray-700">
         <a href="index.html" class="text-blue-600 font-semibold">Home</a>
         <a href="difference.html" class="hover:text-blue-600 font-semibold">What's the Difference?</a>
@@ -89,10 +124,12 @@
       </h1>
 
       <p class="text-gray-600 text-lg mb-8">
-        Get help from fellow students and experts. Ask questions, share experiences, and learn together about DBT-enabled accounts and scholarships.
+        Get help from fellow students and experts. Ask questions, share experiences, and learn together about
+        DBT-enabled accounts and scholarships.
       </p>
 
-      <button id="askQuestionBtn" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+      <button id="askQuestionBtn"
+        class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
         Ask a Question
       </button>
     </div>
@@ -131,25 +168,26 @@
           </svg>
         </button>
       </div>
-      
+
       <form id="questionForm" class="space-y-4">
         <div>
           <label for="questionTitle" class="block text-sm font-medium text-gray-700 mb-2">Question Title</label>
-          <input type="text" id="questionTitle" required 
-                 class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                 placeholder="What's your question about?">
+          <input type="text" id="questionTitle" required
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="What's your question about?">
         </div>
-        
+
         <div>
           <label for="questionDetails" class="block text-sm font-medium text-gray-700 mb-2">Question Details</label>
           <textarea id="questionDetails" rows="4" required
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Describe your question in detail..."></textarea>
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Describe your question in detail..."></textarea>
         </div>
-        
+
         <div>
           <label for="questionCategory" class="block text-sm font-medium text-gray-700 mb-2">Category</label>
-          <select id="questionCategory" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select id="questionCategory"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="dbt-setup">DBT Setup</option>
             <option value="account-linking">Account Linking</option>
             <option value="scholarships">Scholarships</option>
@@ -157,14 +195,14 @@
             <option value="general">General</option>
           </select>
         </div>
-        
+
         <div>
           <label for="userName" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-          <input type="text" id="userName" required 
-                 class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                 placeholder="Enter your name">
+          <input type="text" id="userName" required
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your name">
         </div>
-        
+
         <div class="flex justify-end space-x-3 pt-4">
           <button type="button" id="cancelQuestion" class="px-4 py-2 text-gray-600 hover:text-gray-800">Cancel</button>
           <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
@@ -181,15 +219,18 @@
       <div class="flex flex-col sm:flex-row gap-4 items-center">
         <div class="flex-1">
           <div class="relative">
-            <input type="text" id="searchQuestions" 
-                   class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                   placeholder="Search questions...">
-            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <input type="text" id="searchQuestions"
+              class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Search questions...">
+            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
         </div>
-        <select id="categoryFilter" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <select id="categoryFilter"
+          class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
           <option value="">All Categories</option>
           <option value="dbt-setup">DBT Setup</option>
           <option value="account-linking">Account Linking</option>
@@ -208,8 +249,10 @@
         <h2 class="text-2xl font-bold text-gray-800">Recent Questions</h2>
         <div class="flex space-x-2">
           <button id="sortRecent" class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">Recent</button>
-          <button id="sortPopular" class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-full">Popular</button>
-          <button id="sortUnanswered" class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-full">Unanswered</button>
+          <button id="sortPopular"
+            class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-full">Popular</button>
+          <button id="sortUnanswered"
+            class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-full">Unanswered</button>
         </div>
       </div>
 
@@ -278,8 +321,10 @@
         <ul class="space-y-2 text-sm text-gray-300">
           <li><strong>UIDAI Helpline:</strong> 1947</li>
           <li><strong>NPCI Helpline:</strong> 1800–1201–1947</li>
-          <li><strong>Scholarship Portal:</strong> <a href="https://scholarships.gov.in" class="underline hover:text-white">scholarships.gov.in</a></li>
-          <li><strong>Email:</strong> <a href="mailto:support@dbtguide.gov.in" class="underline hover:text-white">support@dbtguide.gov.in</a></li>
+          <li><strong>Scholarship Portal:</strong> <a href="https://scholarships.gov.in"
+              class="underline hover:text-white">scholarships.gov.in</a></li>
+          <li><strong>Email:</strong> <a href="mailto:support@dbtguide.gov.in"
+              class="underline hover:text-white">support@dbtguide.gov.in</a></li>
         </ul>
       </div>
     </div>

@@ -18,10 +18,13 @@
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
       <a href="index.html" class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div
+          class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.42A12.083 12.083 0 0112 21.5 12.083 12.083 0 015.84 10.58L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 14l6.16-3.42A12.083 12.083 0 0112 21.5 12.083 12.083 0 015.84 10.58L12 14z" />
           </svg>
         </div>
         <div>
@@ -38,7 +41,9 @@
         <a href="support.html" class="hover:text-blue-600 transition font-semibold">Support</a>
       </nav>
 
-      <button id="menuBtn" class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Open menu">
+      <button id="menuBtn"
+        class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -46,15 +51,38 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden" role="dialog" aria-modal="true" aria-labelledby="mobileMenuLabel">
+    <div id="mobileMenu"
+      class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden"
+      role="dialog" aria-modal="true" aria-labelledby="mobileMenuLabel">
+
+      <!-- Top Header: Logo + Title + Close -->
       <div class="p-4 flex justify-between items-center border-b">
-        <span id="mobileMenuLabel" class="font-semibold text-lg text-blue-600">Menu</span>
-        <button id="closeMenu" class="text-gray-600 hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-400" aria-label="Close menu">
+
+        <!-- Logo + Text -->
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 14l6.16-3.42A12.083 12.083 0 0112 21.5 12.083 12.083 0 015.84 10.58L12 14z" />
+            </svg>
+          </div>
+          <h2 id="mobileMenuLabel" class="font-semibold text-sm text-black-600">DBT Account Guide</h2>
+        </div>
+
+        <!-- Close Button -->
+        <button id="closeMenu"
+          class="text-gray-600 hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
+          aria-label="Close menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
+
+      <!-- Mobile Nav Links -->
       <nav class="flex flex-col space-y-4 p-4 text-gray-700">
         <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
         <a href="difference.html" class="text-blue-600 font-semibold">What's the Difference?</a>
@@ -69,16 +97,22 @@
   <main class="max-w-6xl mx-auto px-4 py-16">
     <!-- Heading -->
     <div class="text-center mb-10">
-      <span class="inline-block text-xs font-semibold bg-blue-100 text-blue-600 px-3 py-1 rounded-full mb-2">Educational Guide</span>
+      <span class="inline-block text-xs font-semibold bg-blue-100 text-blue-600 px-3 py-1 rounded-full mb-2">Educational
+        Guide</span>
       <h1 class="text-4xl font-bold mb-3 text-gray-800">What's the Difference?</h1>
-      <p class="text-gray-600 text-lg">Understanding the crucial difference between Aadhaar-linked and DBT-enabled accounts</p>
+      <p class="text-gray-600 text-lg">Understanding the crucial difference between Aadhaar-linked and DBT-enabled
+        accounts</p>
     </div>
 
     <!-- Tabs -->
     <div class="flex justify-center gap-6 mb-8">
-      <button id="tab-comparison" class="px-4 py-2 rounded-full font-semibold bg-blue-600 text-white shadow text-sm">⚖️ Comparison</button>
-      <button id="tab-process" class="px-4 py-2 rounded-full font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200 text-sm">➡️ Process Flow</button>
-      <button disabled class="px-4 py-2 rounded-full font-semibold text-gray-400 cursor-not-allowed text-sm">🔑 Key Terms</button>
+      <button id="tab-comparison" class="px-4 py-2 rounded-full font-semibold bg-blue-600 text-white shadow text-sm">⚖️
+        Comparison</button>
+      <button id="tab-process"
+        class="px-4 py-2 rounded-full font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200 text-sm">➡️ Process
+        Flow</button>
+      <button disabled class="px-4 py-2 rounded-full font-semibold text-gray-400 cursor-not-allowed text-sm">🔑 Key
+        Terms</button>
     </div>
 
     <!-- Content Sections -->
